@@ -8,18 +8,19 @@ type: "overview"
 
 ## Portfolio Overview
 
-This portfolio collects projects and notes that show what I am learning,
-building, and exploring.
-
-The project articles focus on concrete work, such as models, proofs, programs,
-or technical experiments. The note articles explain the background ideas behind
-those projects, including definitions, examples, and learning records.
+This is my portfolio section, I plan to collect my projects and learning notes here.
 
 ### Current Direction
 
-- Constraint programming and optimization
-- Formal logic and Lean
-- Mathematics, theoretical computer science, and structured problem solving
+For the **project part**:
+
+- Formalization of MiniZinc by Lean
+
+For the **notes part**:
+
+- MAT1830: basic math knowledge for computer science
+- FIT2014: the theory of computation
+- ATS2866: symbolic logic
 
 ### How to Read This Portfolio
 
