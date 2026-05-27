@@ -17,7 +17,10 @@ header-img: "img/avatar.jpg"
 
     <h3>Projects</h3>
 
-    {% for project in site.projects %}
+    {% assign projects = site.portfolio | where: "type", "project" %}
+    {% assign notes = site.portfolio | where: "type", "note" %}
+
+    {% for project in projects %}
         <div class="project">
             <h3>
                 <a href="{{ project.url | prepend: site.baseurl }}">
@@ -61,9 +64,9 @@ header-img: "img/avatar.jpg"
         {% endunless %}
     {% endfor %}
 
-    {% if site.projects.size == 0 %}
+    {% if projects.size == 0 %}
         <p>
-            Add project articles in the <code>_projects</code> folder.
+            Add project articles in the <code>_portfolio/projects</code> folder.
         </p>
     {% endif %}
 
@@ -71,7 +74,7 @@ header-img: "img/avatar.jpg"
 
     <h3>Notes</h3>
 
-    {% for note in site.notes %}
+    {% for note in notes %}
         <div class="note">
             <h3>
                 <a href="{{ note.url | prepend: site.baseurl }}">
@@ -89,9 +92,9 @@ header-img: "img/avatar.jpg"
         {% endunless %}
     {% endfor %}
 
-    {% if site.notes.size == 0 %}
+    {% if notes.size == 0 %}
         <p>
-            Add note articles in the <code>_notes</code> folder.
+            Add note articles in the <code>_portfolio/notes</code> folder.
         </p>
     {% endif %}
 </div>
