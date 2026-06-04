@@ -1,0 +1,174 @@
+.home-profile {
+    color: #1f2933;
+}
+
+.home-profile .profile-hero {
+    padding: 28px 0 22px;
+    border-bottom: 1px solid #e7ebef;
+}
+
+.home-profile .profile-kicker {
+    margin: 0 0 8px;
+    color: #637083;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.home-profile .profile-name {
+    margin: 0 0 12px;
+    font-size: 36px;
+    line-height: 1.15;
+}
+
+.home-profile .profile-summary {
+    max-width: 760px;
+    margin-bottom: 18px;
+    color: #4b5563;
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+.home-profile .profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.home-profile .profile-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 7px 13px;
+    border: 1px solid #d8dee6;
+    border-radius: 6px;
+    color: #233446;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    background: #fff;
+    transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.home-profile .profile-link:hover,
+.home-profile .profile-link:focus {
+    border-color: #8aa4c2;
+    color: #17202a;
+    text-decoration: none;
+    box-shadow: 0 8px 18px rgba(31, 41, 51, 0.1);
+    transform: translateY(-1px);
+}
+
+.home-profile .profile-section {
+    padding: 26px 0;
+    border-bottom: 1px solid #e7ebef;
+}
+
+.home-profile .profile-section:last-child {
+    border-bottom: 0;
+}
+
+.home-profile .profile-section h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: #111827;
+    font-size: 24px;
+}
+
+.home-profile .entry {
+    margin-bottom: 22px;
+}
+
+.home-profile .entry:last-child {
+    margin-bottom: 0;
+}
+
+.home-profile .entry-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px 16px;
+    margin-bottom: 6px;
+}
+
+.home-profile .entry-title strong {
+    color: #111827;
+    font-size: 17px;
+}
+
+.home-profile .entry-date {
+    color: #667085;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.home-profile .entry-subtitle {
+    margin: 0 0 8px;
+    color: #4b5563;
+}
+
+.home-profile ul {
+    padding-left: 22px;
+}
+
+.home-profile li {
+    margin-bottom: 7px;
+}
+
+.home-profile .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.home-profile .skill-block {
+    padding: 15px;
+    border: 1px solid #e1e6ec;
+    border-radius: 6px;
+    background: #fbfcfd;
+}
+
+.home-profile .skill-block h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #111827;
+    font-size: 15px;
+}
+
+.home-profile .skill-block p {
+    margin: 0;
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.home-profile .award-list {
+    display: grid;
+    gap: 10px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.home-profile .award-list li {
+    margin: 0;
+    padding: 12px 14px;
+    border-left: 3px solid #587b9f;
+    background: #f7f9fb;
+}
+
+@media (max-width: 767px) {
+    .home-profile .profile-name {
+        font-size: 30px;
+    }
+
+    .home-profile .profile-summary {
+        font-size: 16px;
+    }
+
+    .home-profile .skill-grid {
+        grid-template-columns: 1fr;
+    }
+}

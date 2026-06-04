@@ -1,13 +1,13 @@
 # Site settings
-title: Zachary Wang's Blog
-SEOTitle: Zachary的博客
+title: Zixi Wang
+SEOTitle: Zixi Wang
 header-img: img/avatar.jpg
 email: auzacharyw@gmail.com
-description: "This is a blog of Zachary."
+description: "Personal homepage of Zixi Wang."
 keyword: "math, life, lean, TCS"
-url: "https://auzacharyw.github.io/"          # your host, for absolute URL
+url: "https://zixiwang0o0.github.io/"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/auzacharyw/auzacharyw.github.io.git" # you code repository
+github_repo: "https://github.com/zixiwang0o0/zixiwang0o0.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -20,7 +20,7 @@ sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in bot
 RSS: false
 #weibo_username:    
 #zhihu_username:    
-github_username:    auzacharyw
+github_username:    zixiwang0o0
 # facebook_username:  username
 # jianshu_username:   jianshu_id
 #twitter_username:  

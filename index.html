@@ -1,57 +1,110 @@
 ---
 layout: page
-description: "何意味"
+description: "Mathematics student interested in formal methods, Lean, and MiniZinc."
+header-img: "img/avatar.jpg"
 ---
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <!-- 是否展示文章正文前200个字 -->
-        <!--<div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
-        </div>-->
-    </a>
-    <p class="post-meta">
-        Posted by
-        {% if post.author %}
-        {{ post.author }}
-        {% else %}
-        {{ site.title }}
-        {% endif %}
-        on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-</div>
-<hr>
-{% endfor %}
+<div class="post-container home-profile">
+    <section class="profile-hero">
+        <p class="profile-kicker">Mathematics · Formal Methods · Lean</p>
+        <h2 class="profile-name">Zixi Wang</h2>
+        <p class="profile-summary">
+            I am an undergraduate mathematics student in the Honors Science Program
+            at Xi'an Jiaotong University, currently studying at Monash University
+            through an exchange and study abroad program. My current research
+            interests center on formal methods, theorem proving, and the
+            formalization of MiniZinc in Lean.
+        </p>
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-            <span class="glyphicon glyphicon-arrow-left" aria-hidden="true">
-            </span>
-            Newer Posts
-        </a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-            Older Posts
-            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true">
-            </span>
-        </a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+        <div class="profile-links">
+            <a class="profile-link" href="mailto:auzacharyw@gmail.com">Email</a>
+            <a class="profile-link" href="{{ '/_portfolio/Zixi_Wang_CV.pdf' | prepend: site.baseurl }}">CV PDF</a>
+            <a class="profile-link" href="https://github.com/zixiwang0o0">GitHub</a>
+        </div>
+    </section>
+
+    <section class="profile-section">
+        <h3>Education</h3>
+        <div class="entry">
+            <div class="entry-title">
+                <strong>Xi'an Jiaotong University</strong>
+                <span class="entry-date">Sep. 2023 - Jul. 2027 expected</span>
+            </div>
+            <p class="entry-subtitle">Honors Science Program (Mathematics), B.Sc. in Mathematics.</p>
+            <ul>
+                <li>Supervisor: Kuize Zhang</li>
+                <li>GPA: 3.73/4.30 | 87.83/100</li>
+                <li>Relevant coursework: optimization theory and algorithms, numerical analysis, probability, mathematical statistics, abstract algebra, topology.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-title">
+                <strong>Monash University</strong>
+                <span class="entry-date">Feb. 2026 - Jun. 2026</span>
+            </div>
+            <p class="entry-subtitle">Exchange and Study Abroad Program.</p>
+            <ul>
+                <li>Mentor: Guido Tack</li>
+                <li>Enrolled courses: theory of computation, symbolic logic, discrete mathematics for computer science.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="profile-section">
+        <h3>Research Experience</h3>
+        <div class="entry">
+            <div class="entry-title">
+                <strong>Formalization for MiniZinc in Lean</strong>
+                <span class="entry-date">Mar. 2026 - present</span>
+            </div>
+            <p class="entry-subtitle">Mentor: Assoc. Prof. Guido Tack, Monash University.</p>
+            <ul>
+                <li>Formalizing MiniZinc in Lean with the long-term goal of verifying semantic equivalence between MiniZinc and FlatZinc.</li>
+                <li>Formalized part of the syntax and semantics of ground MiniZinc, including core definitions, typing judgments, and basic evaluation rules.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-title">
+                <strong>AI for Mathematics, Shanghai Jiao Tong University</strong>
+                <span class="entry-date">Jul. 2025</span>
+            </div>
+            <p class="entry-subtitle">Mentor: Assoc. Prof. Tao Luo.</p>
+            <ul>
+                <li>Gained hands-on experience with formal theorem proving in Lean.</li>
+                <li>Led a group project formalizing IMO 1988 Problem 6, the Vieta jumping problem.</li>
+                <li>Formalized proofs of two linear algebra theorems in Lean.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="profile-section">
+        <h3>Technical Skills</h3>
+        <div class="skill-grid">
+            <div class="skill-block">
+                <h4>Programming</h4>
+                <p>C, Matlab, Python, Lean, MiniZinc, Maple.</p>
+            </div>
+            <div class="skill-block">
+                <h4>Tools</h4>
+                <p>LaTeX, Git, GitHub, HTML/CSS.</p>
+            </div>
+            <div class="skill-block">
+                <h4>Interests</h4>
+                <p>Formal methods, mathematical modeling, algorithms, theorem proving.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="profile-section">
+        <h3>Honors & Awards</h3>
+        <ul class="award-list">
+            <li>Third-class Academic Scholarship, Xi'an Jiaotong University, Nov. 2024.</li>
+            <li>Second Prize, The 15th Chinese Mathematics Competitions for College Students, Dec. 2023.</li>
+            <li>Selected Candidate, Tsinghua University Yau Mathematical Sciences Leaders Program on-campus selection, Dec. 2022.</li>
+            <li>First Prize, The 38th National High School Mathematics League, Chongqing Provincial Division, Nov. 2022.</li>
+            <li>Silver Medal, The 18th China Southeastern Mathematical Olympiad, Jul. 2021.</li>
+        </ul>
+    </section>
+</div>
