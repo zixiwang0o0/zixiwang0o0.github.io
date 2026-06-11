@@ -1572,7 +1572,8 @@ img::-moz-selection {
 }
 /* Tags support End*/
 /* Hux make all img responsible in post-container */
-.post-container img {
+.post-container img,
+.postlist-container img {
   display: block;
   max-width: 100%;
   height: auto;
