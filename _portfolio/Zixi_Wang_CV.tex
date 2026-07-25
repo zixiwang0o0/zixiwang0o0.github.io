@@ -1,0 +1,189 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins
+\addtolength{\oddsidemargin}{-0.45in}
+\addtolength{\evensidemargin}{-0.45in}
+\addtolength{\textwidth}{0.9in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+
+% Section style
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeSubheading}[4]{
+  \vspace{2pt}
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}
+  \vspace{-4pt}
+}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+\newcommand{\resumeItemListStart}{
+  \begin{itemize}[leftmargin=0.18in]
+}
+
+\newcommand{\resumeItemListEnd}{
+  \end{itemize}\vspace{-4pt}
+}
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{center}
+    {\fontsize{24}{28}\selectfont\textsc{Zixi Wang}} \\[6pt]
+    \faPhone \ +86 155-2000-4317
+    \quad
+    \faEnvelope \ \href{mailto:auzacharyw@gmail.com}{auzacharyw@gmail.com}
+    \quad
+    \faGlobe \ \href{https://zixiwang0o0.github.io/}{https://zixiwang0o0.github.io/}
+\end{center}
+
+%-----------EDUCATION-----------------
+\section{EDUCATION}
+
+\resumeSubheading
+{Xi'an Jiaotong University, Honors Science Program (Mathematics)}
+{Xi'an, China}
+{B.Sc. in Mathematics}
+{Sep. 2023 -- Jul. 2027 (expected)}
+
+\resumeItemListStart
+  \resumeItem{Supervisor: Kuize Zhang @ Xi'an Jiao Tong University}
+  \resumeItem{GPA: 3.73/4.30 $|$ 87.83/100}
+  %\resumeItem{Rank: 5/26}
+  \resumeItem{Research Interest: Formal Method, DFA, CP}
+  \resumeItem{Programming: C, Matlab, Python, Lean, MiniZinc, Maple}
+  \resumeItem{Tools: LaTeX, Git, Github, HTML/CSS}
+  \resumeItem{Relevant Coursework: Theory and Algorithm of Optimization, College Computer - Algorithm Programming, Numerical Analysis, Probability, Mathematical Statistics, Abstract Algebra I, Topology}
+\resumeItemListEnd
+
+\resumeSubheading
+{Monash University}
+{Melbourne, Australia}
+{Exchange and Study Abroad Program}
+{Feb. 2026 -- Jun. 2026}
+
+\resumeItemListStart
+  \resumeItem{Mentor: Guido Tack}
+  \resumeItem{Enrolled Courses: Theory of Computation, Symbolic Logic, Discrete Mathematics for Computer Science}
+\resumeItemListEnd
+
+%-----------RESEARCH EXPERIENCE-----------------
+\section{RESEARCH EXPERIENCE}
+
+\resumeSubheading
+{Formalization for MiniZinc in Lean}
+{Melbourne, Australia}
+{Mentor: Assoc. Prof. Guido Tack @ Monash University}
+{Mar. 2026 -- present}
+
+\resumeItemListStart
+  \resumeItem{Focused on formalizing MiniZinc in Lean, with the long-term goal of verifying the semantic equivalence between MiniZinc and FlatZinc.}
+  \resumeItem{Formalized core of the syntax and semantics of ground MiniZinc, including core definitions, typing judgments and basic evaluation semantics.}
+  \resumeItem{Created a python script as a translator to automatically generate Lean code from MiniZinc models.}
+\resumeItemListEnd
+
+\resumeSubheading
+{AI for Mathematics, Shanghai Jiao Tong University}
+{Shanghai, China}
+{Mentor: Assoc. Prof. Tao Luo @ Shanghai Jiao Tong University}
+{Jul. 2025}
+
+\resumeItemListStart
+  \resumeItem{Gained hands-on experience with formal theorem proving in Lean.}
+  \resumeItem{Led a group project formalizing the proof of IMO 1988 Problem 6, known as the Vieta jumping problem.}
+  \resumeItem{Formalized the proofs of two linear algebra theorems in Lean.}
+\resumeItemListEnd
+
+%-----------HONORS & AWARDS-----------------
+\section{HONORS \& AWARDS}
+
+\resumeSubheading
+{Third-class Academic Scholarship}
+{Xi'an, China}
+{Xi'an Jiaotong University}
+{Nov. 2024}
+
+\resumeSubheading
+{The 15th Chinese Mathematics Competitions for College Students (CMC)}
+{Xi'an, China}
+{Second Prize (Mathematics Major)}
+{Dec. 2023}
+
+\resumeSubheading
+{Tsinghua University Yau Mathematical Sciences Leaders Program}
+{Beijing, China}
+{Selected Candidate for On-campus Selection}
+{Dec. 2022}
+
+%\resumeSubheading
+%{The 21th China Girls' Mathematical Olympiad (CGMO)}
+%{Tianjin, China}
+%{Silver Medal}
+%{Aug. 2022}
+
+\resumeSubheading
+{The 38th National High School Mathematics League}
+{Chongqing, China}
+{First Prize, Chongqing Provincial Division}
+{Nov. 2022}
+
+% \resumeSubheading
+% {The 17th China Northern Mathematical Olympiad (CNMO)}
+% {Online}
+% {First Prize}
+% {Aug. 2022}
+
+\resumeSubheading
+{The 37th National High School Mathematics League}
+{Chongqing, China}
+{Second Prize, Chongqing Provincial Division}
+{Oct. 2021}
+
+%\resumeSubheading
+%{The 20th China Girls' Mathematical Olympiad (CGMO)}
+%{Changchun, China}
+%{Gold Medal}
+%{Aug. 2021}
+
+\resumeSubheading
+{The 18th China Southeastern Mathematical Olympiad (CSMO)}
+{Nanchang, China}
+{Silver Medal}
+{Jul. 2021}
+
+\resumeSubheading
+{The 36th National High School Mathematics League}
+{Chongqing, China}
+{Second Prize, Chongqing Provincial Division}
+{Oct. 2020}
+
+\end{document}

@@ -1,0 +1,42 @@
+title: Zixi Wang
+SEOTitle: Zixi Wang
+header-img: img/avatar.jpg
+email: auzacharyw@gmail.com
+description: "Personal homepage of Zixi Wang."
+keyword: "math, life, lean, TCS"
+url: "https://zixiwang0o0.github.io"
+baseurl: ""
+github_repo: "https://github.com/zixiwang0o0/zixiwang0o0.github.io.git"
+
+sidebar: true
+sidebar-avatar: /img/avatar.jpg
+
+RSS: false
+github_username: zixiwang0o0
+
+permalink: pretty
+paginate: 10
+exclude:
+  - less
+  - node_modules
+  - Gruntfile.js
+  - package.json
+  - README.md
+anchorjs: true
+
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+
+gems: [jekyll-paginate]
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+
+featured-tags: true
+featured-condition-size: 1
+chrome-tab-theme-color: "#000000"
+service-worker: true

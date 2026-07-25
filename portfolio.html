@@ -1,0 +1,123 @@
+---
+layout: page
+title: "Portfolio"
+description: "Projects and work by Zachary Wang."
+header-img: "img/avatar.jpg"
+---
+
+<div class="post-container">
+    <h2>Portfolio</h2>
+
+    <p>
+        This page collects project articles and supporting notes. Projects show
+        finished or ongoing work, while notes explain the ideas behind them.
+    </p>
+
+    <hr>
+
+    {% assign overview = site.portfolio | where: "type", "overview" | first %}
+    {% assign projects = site.portfolio | where: "type", "project" %}
+    {% assign notes = site.portfolio | where: "type", "note" %}
+
+    <h3>Overview</h3>
+
+    {% if overview %}
+        <div class="overview">
+            <h3>
+                <a href="{{ overview.url | prepend: site.baseurl }}">
+                    {{ overview.title }}
+                </a>
+            </h3>
+
+            {% if overview.description %}
+                <p>{{ overview.description }}</p>
+            {% endif %}
+        </div>
+    {% else %}
+        <p>
+            Add a general overview article at <code>_portfolio/overview.md</code>.
+        </p>
+    {% endif %}
+
+    <hr>
+
+    <h3>Projects</h3>
+
+    {% for project in projects %}
+        <div class="project">
+            <h3>
+                <a href="{{ project.url | prepend: site.baseurl }}">
+                    {{ project.title }}
+                </a>
+            </h3>
+
+            {% if project.description %}
+                <p>{{ project.description }}</p>
+            {% endif %}
+
+            {% if project.tech %}
+                <p><strong>Tech:</strong> {{ project.tech }}</p>
+            {% endif %}
+
+            {% if project.github or project.demo %}
+                <p>
+                    {% if project.github %}
+                        <a href="{{ project.github }}">GitHub</a>
+                    {% endif %}
+
+                    {% if project.github and project.demo %}
+                        |
+                    {% endif %}
+
+                    {% if project.demo %}
+                        <a href="{{ project.demo }}">Live Demo</a>
+                    {% endif %}
+                </p>
+            {% endif %}
+
+            {% if project.note %}
+                <p>
+                    <a href="{{ project.note | prepend: site.baseurl }}">Project Note</a>
+                </p>
+            {% endif %}
+        </div>
+
+        {% unless forloop.last %}
+            <hr>
+        {% endunless %}
+    {% endfor %}
+
+    {% if projects.size == 0 %}
+        <p>
+            Add project articles in the <code>_portfolio/projects</code> folder.
+        </p>
+    {% endif %}
+
+    <hr>
+
+    <h3>Notes</h3>
+
+    {% for note in notes %}
+        <div class="note">
+            <h3>
+                <a href="{{ note.url | prepend: site.baseurl }}">
+                    {{ note.title }}
+                </a>
+            </h3>
+
+            {% if note.description %}
+                <p>{{ note.description }}</p>
+            {% endif %}
+        </div>
+
+        {% unless forloop.last %}
+            <hr>
+        {% endunless %}
+    {% endfor %}
+
+    {% if notes.size == 0 %}
+        <p>
+            Add note articles in the <code>_portfolio/notes</code> folder.
+        </p>
+    {% endif %}
+</div>
