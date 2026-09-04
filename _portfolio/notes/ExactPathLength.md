@@ -1,18 +1,211 @@
-## core problem
+---
+layout: page
+title: "Exact Path Length Problem(EPL)"
+description: ""
+header-img: "img/avatar.jpg"
+type: "note"
+---
 
-Given a graph and two nodes then finding the shortest path in a weighted graph.
+## Introduction
 
--> what application?
+>Finding shortest paths in weighted graphs is one of the most central problems in graph algorithms.
 
-longest -> NP-complete
+### what are the other central problems in graph algorithms?
+1. longest path
+2. graph coloring
+3. *topological sorting*
+4. *matching*
+5. *maximum flow/min-cut*
+6. *minimum spanning tree*
+7. *rechability/connectivity*
 
-==> instead of finding the shortest path, we ask when given cost, is there exist a path of cost k?
+>This problem has plenty of applications.
 
-the weight here are integers. The graph we considered are directed multi.
+### for example, what application?
+1. *GPS route planning*
+2. *network packet routing*
+3. *robot navigation*
+4. *logistics*
 
-1. EPL is NP hard. 
-2. pseudo-polynomial time algorithm
-3. preprocess -> sign-free -> postprocess
+>This problem has several polynomial time solution algorithms now.
+
+### what are the algorithms?
+1. Dijkstra
+2. Bellman–Ford
+3. Floyd–Warshall
+4. DAG shortest-path
+
+>On the other hand, finding the longest path is a NP-complete problem.
+
+### review: what is **NP-complete**?
+
+NP-complete = NP + NP-hard. Where NP means a proposed solution can be verified in a polynomial time, while **NP-hard** means every NP problem can reduce to the NP-hard problem in a polynomial time. i.e. A NP-hard problem is the hardest problem in NP.
+
+### review: what is **reduce**?
+
+Reduce A to B means transform any instance of problem A into B in polynomial time, and preserve the YES/NO answer.
+
+For decision problem $A,B$:
+
+$$
+A\le_p B
+\iff
+\exists f \text{ computable in polynomial time, s.t. }
+x\in A \iff f(x)\in B.
+$$
+
+$f$ is the **polynomial-time reduction**.
+
+### review: what is **decision problem**?
+
+It is identified with the set of YES-instances.
+
+Example: let **A = Subset Sum**.
+
+$$
+A=\{(u_1,\dots,u_m,B):\exists J,\ \sum_{j\in J}u_j=B\}
+$$
+
+Take
+
+$$
+x=(3,5,8,11).
+$$
+
+Since
+
+$$
+3+8=11,
+$$
+
+we have
+
+$$
+x\in A.
+$$
+
+---
+
+Instead of finding the shortest path(here the shortest means lowest cost), we ask when given cost k, is there exist a path of cost k?
+
+The weight here are integers. The graph we considered are **directed multi-graph**.
+
+**Definition 1**. Given two nodes p, q ∈ V(G) from G and a target cost k, the exact path length(EPL) problem is to determine whether or not there is a path in G from the initial node p to the final node q with cost exactly k.
+
+```text
+Original EPL
+(edges may be + / - mixed)
+        |
+        | sign-relaxation
+        v
+   unsign(G)
+(add shortcut edges)
+        |
+        | remove sign alternation
+        v
+Sign-free EPL
+(all + or all -)
+        |
+        | DP / matrix method
+        v
+ Is there a path of cost k?
+      YES / NO
+```
+
+For example:
+
+```text
+A --(+5)--> B --(-2)--> C
+
+        relaxation
+            ↓
+
+A --(+3)--------------> C
+```
+
+>The same approach enables us to solve the problem of finding a path with the smallest absolute cost in pseudo-polynomial time between two given nodes. 
+
+### what is the problem of finding a path with the smallest absolute cost?
+
+min abs(cost).
+
+>The motivation for EPL in fact comes from the case when the weights are integer vectors, which comes from the analysis of **multi-tape automata**.
+
+### what is multi-tape automata?
+
+It's an automata modeled with several tapes. Here is the mathematical definition when the weights are trits:
+
+$$
+M=(Q,\Sigma_1,\dots,\Sigma_h,\delta,q_0,F)
+$$
+
+with transition function
+
+$$
+\delta:
+Q\times \Sigma_1\times\cdots\times\Sigma_h
+\to
+Q\times\{-1,0,+1\}^h
+$$
+
+Each component of
+
+$$
+(-1,0,+1)
+$$
+
+means one tape head moves left, stays, or moves right. The machine has finite states and read-only tapes. 
+
+Example: a 2-tape automaton checks whether first symbols match.
+
+$$
+Q=\{q_0,q_{yes},q_{no}\}
+$$
+
+$$
+\delta(q_0,a,a)=(q_{yes},(1,1))
+$$
+
+$$
+\delta(q_0,a,b)=(q_{no},(1,1))
+$$
+
+Each step reads both tapes and moves both heads right. The head of the tape will read the letters, and check the automaton to see how the state will change.
+
+```text
+heads read symbols
+      ↓
+current state + symbols
+      ↓
+choose a transition
+      ↓
+change state + move heads
+```
+
+### summarizing the motivation:
+
+```text
+string database query
+        ↓
+executed by multi-tape automaton
+        ↓
+need to know: will it loop forever?
+        ↓
+look at automaton's transition graph
+        ↓
+each transition = edge
+head movements = vector weight
+        ↓
+a loop with total weight (0,...,0)
+means heads return to original positions
+        ↓
+therefore need to detect a path/cycle
+with an exact vector cost
+        ↓
+Exact Path Length problem
+```
+
+# Not Arranged
 
 ## 2 Pseudo-polynomial time algorithm
 
