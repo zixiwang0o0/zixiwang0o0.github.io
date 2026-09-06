@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.9.22)  4 AUG 2026 16:04
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.9.22)  6 SEP 2026 13:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -397,12 +397,12 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `Zixi_Wang_CV.out' has not changed.
-(rerunfilecheck)             Checksum: 4BAB40E833F2D1B27497E9B308DF0346;356.
+(rerunfilecheck)             Checksum: 6D01EE71D2BA34FB72AE108F7BD81AB2;492.
  ) 
 Here is how much of TeX's memory you used:
  13441 strings out of 473832
  257433 string characters out of 5728568
- 708737 words of memory out of 5000000
+ 706894 words of memory out of 5000000
  36358 multiletter control sequences out of 15000+600000
  562708 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
